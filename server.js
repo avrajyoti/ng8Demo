@@ -3,10 +3,10 @@ const path = require('path');
 
 const ngApp = express();
 
-ngApp.use(express.static('./dist/angular-forms-validation'));
+ngApp.use(express.static('./dist/ng8App'));
 
 ngApp.get('/*', function (request, response) {
-    response.sendFile(path.join(__dirname, '/dist/angular-forms-validation/index.html'));
+    response.sendFile(path.join(__dirname, '/dist/ng8App/index.html'));
 });
 
 ngApp.listen(process.env.PORT || 8080);
